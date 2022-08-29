@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://fabienpesquerel.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fabienpesquerel.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-08-29T17:40:41+02:00</updated><id>https://fabienpesquerel.github.io/feed.xml</id><title type="html">blank</title><subtitle>Personal webpage of Fabien Pesquerel.
+</subtitle><entry><title type="html">MCMC Sampler</title><link href="https://fabienpesquerel.github.io/blog/2022/mcmc-sampler/" rel="alternate" type="text/html" title="MCMC Sampler" /><published>2022-08-29T00:00:00+02:00</published><updated>2022-08-29T00:00:00+02:00</updated><id>https://fabienpesquerel.github.io/blog/2022/mcmc-sampler</id><content type="html" xml:base="https://fabienpesquerel.github.io/blog/2022/mcmc-sampler/"><![CDATA[<p>The github repository is</p>
+
+<div class="repositories d-flex flex-column justify-content-between align-items-center">
+    
+
+
+
+<div class="repo p-2 text-center">
+  <a href="https://github.com/fabienpesquerel/MCMC">
+    <img class="repo-img-light w-100" alt="fabienpesquerel/MCMC" src="https://github-readme-stats.vercel.app/api/pin/?username=fabienpesquerel&amp;repo=MCMC&amp;theme=default&amp;show_owner=false" />
+    <img class="repo-img-dark w-100" alt="fabienpesquerel/MCMC" src="https://github-readme-stats.vercel.app/api/pin/?username=fabienpesquerel&amp;repo=MCMC&amp;theme=dark&amp;show_owner=false" />
+  </a>
+</div>
+
+</div>
+
+<h2 id="description">Description</h2>
+
+<p>MCMC is a python implementation of some MCMC sampler algorithms that can leverage pyTorch’s automatic differentiation to sample from a given (unormalized or not) density distribution.</p>
+
+<p>For instance, if we were to sample from a Gaussian distribution using MALA algorithm, one can do like in the <code class="language-plaintext highlighter-rouge">mcmc_test.py</code> file and get the following kernel density estimation and sample trajectory:</p>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-7 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/kde_mala-480.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/kde_mala-800.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/kde_mala-1400.webp" />
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/kde_mala.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="kernel density estimation via MALA" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+    </div>
+    <div class="col-sm-4 mt-3 mt-md-2">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/traj_mala-480.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/traj_mala-800.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/traj_mala-1400.webp" />
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/traj_mala.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="trajectory of a MALA sampling" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Within the <code class="language-plaintext highlighter-rouge">mala_test.py</code> file, one can also find a small function to compute autocorrelation and check that the Markov Chain “mixes” well:</p>
+
+<div class="row justify-content-sm-center">
+<div class="col-sm-7 mt-3 mt-md-0">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/autocorr_mala-480.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/autocorr_mala-800.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/autocorr_mala-1400.webp" />
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/autocorr_mala.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Auto-correlation" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+</div>
+</div>
+
+<p>To help tuning parameters of the MALA algorithm, it is possible to print the acceptation ratio. A good empirical fit for this is around 63%. It means that the chain is exploring enough so that around 63% of the propositions are accepted as the next step.</p>
+
+<p>One can also find a small tutorial in the <code class="language-plaintext highlighter-rouge">tutorial.ipynb</code> file.</p>
+
+<h2 id="practical-use">Practical use</h2>
+
+<p>A useful example can be found in <code class="language-plaintext highlighter-rouge">mala_test.py</code> as well as in the <code class="language-plaintext highlighter-rouge">tutorial.ipynb</code>.</p>
+
+<p>The repository is organized around two files:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">mcmc.py</code> which contains several classes associated to MCMC sampler algorithms. Since we need a density function and a gradient in Langevin methods, one can find an important class in the next file.</li>
+  <li><code class="language-plaintext highlighter-rouge">function.py</code> which contains one class, <strong>MODEL</strong>,  that is used by the MCMC classes. <strong>MODEL</strong> should contains all the information one have about the distribution one whish to sample from. The bare minimum is either an (unormalized) density or log-density. This function should be written using pyTorch only function so that one can use autodifferentiation to compute gradient of the log-density with respect to the input. However, if the gradient is known, you can still use it in the <strong>MODEL</strong>.</li>
+</ul>
+
+<h2 id="example">Example</h2>
+
+<p>Assume that one have an implementation of the <em>density</em> function we whish ta sample from. Then a minimal working example would be like:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">mcmc</span> <span class="kn">import</span> <span class="n">MALA</span>
+<span class="kn">from</span> <span class="nn">function</span> <span class="kn">import</span> <span class="n">MODEL</span>
+
+<span class="n">DIMENSION_INPUT_SPACE</span> <span class="o">=</span> <span class="nb">int</span> <span class="n">nbr</span>
+<span class="n">GRADIENT_STEPSIZE</span> <span class="o">=</span> <span class="nb">float</span> <span class="n">nbr</span>
+<span class="n">RANDOM_STEPSIZE</span> <span class="o">=</span> <span class="nb">float</span> <span class="n">nbr</span>
+<span class="n">INITIAL_POINT</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="n">DIMENSION_INPUT_SPACE</span><span class="p">)</span>
+<span class="n">NBR_SAMPLES</span> <span class="o">=</span> <span class="nb">int</span> <span class="n">nbr</span>
+
+
+<span class="k">def</span> <span class="nf">density_to_sample_from</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># ...
+</span>    <span class="c1"># Some pyTorch thingsgummy
+</span>    <span class="c1"># ...
+</span>    <span class="k">return</span> <span class="n">density_at_x</span>
+
+<span class="c1"># Create probabilistical model
+</span><span class="n">probabilistical_model</span> <span class="o">=</span> <span class="n">MODEL</span><span class="p">(</span><span class="n">density</span><span class="o">=</span><span class="n">density_to_sample_from</span><span class="p">)</span>
+
+<span class="c1"># Create MCMC method
+</span><span class="n">mala_mcmc</span> <span class="o">=</span> <span class="n">MALA</span><span class="p">(</span><span class="n">probabilistical_model</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">torch</span><span class="p">.</span><span class="n">eye</span><span class="p">(</span><span class="n">DIMENSION_INPUT_SPACE</span><span class="p">),</span>
+                 <span class="n">gradient_step</span><span class="o">=</span><span class="n">GRADIENT_STEPSIZE</span><span class="p">,</span>
+	         <span class="n">random_step</span><span class="o">=</span><span class="n">RANDOM_STEPSIZE</span><span class="p">,</span>
+	    	 <span class="n">initialization</span><span class="o">=</span><span class="n">INITIAL_POINT</span><span class="p">)</span>
+
+<span class="c1"># Sample
+</span><span class="n">SAMPLES</span> <span class="o">=</span> <span class="n">mala_mcmc</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">NBR_SAMPLES</span><span class="p">)</span>
+
+<span class="c1"># Then one can plot some dimensions
+# Please see mala_test.py or tutorial.ipynb</span>
+</pre></td></tr></tbody></table></code></pre></figure>]]></content><author><name></name></author><category term="project-documentation" /><category term="computational-statistics" /><category term="code" /><summary type="html"><![CDATA[Description of a pyTorch implementation of a MCMC sampler]]></summary></entry></feed>
