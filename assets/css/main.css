@@ -272,6 +272,10 @@ pre pre, pre code { background-color: transparent; border-radius: 0; padding: 0;
 
 code { color: var(--global-theme-color); background-color: var(--global-code-bg-color); border-radius: 3px; padding: 3px 3px; }
 
+.code-header { display: flex; justify-content: flex-end; }
+
+.copy-code-button { display: grid; grid-auto-flow: column; align-items: center; grid-column-gap: 4px; cursor: pointer; font-size: 1.5rem; padding: 1px 1px; font-weight: 200; color: black; top: 35px !important; right: 5px !important; position: relative; border: 2px solid black; background-color: transparent; border-radius: 6px; opacity: 0.45; }
+
 html.transition, html.transition *, html.transition *:before, html.transition *:after { transition: all 750ms !important; transition-delay: 0 !important; }
 
 .post .post-meta { color: var(--global-text-color-light); font-size: 0.875rem; margin-bottom: 0; }
@@ -283,6 +287,12 @@ html.transition, html.transition *, html.transition *:before, html.transition *:
 .post .post-tags a:hover { color: var(--global-theme-color); }
 
 .post .post-content blockquote { border-left: 5px solid var(--global-theme-color); padding: 8px; }
+
+#part1 { scroll-margin-top: 60px; }
+
+#part2 { scroll-margin-top: 60px; }
+
+#part3 { scroll-margin-top: 60px; }
 
 /******************************************************************************* Style overrides for distill blog posts. */
 d-byline { border-top-color: var(--global-divider-color) !important; }
