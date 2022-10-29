@@ -144,9 +144,9 @@ blockquote { background: var(--global-bg-color); border-left: 2px solid var(--gl
 
 .social .contact-note { font-size: 0.8rem; }
 
-footer.fixed-bottom { background-color: var(--global-footer-bg-color); font-size: 0.75rem; }
+footer.fixed-bottom { background-color: var(--global-footer-bg-color); font-size: 0.55rem; }
 
-footer.fixed-bottom .container { color: var(--global-footer-text-color); padding-top: 9px; padding-bottom: 8px; }
+footer.fixed-bottom .container { color: var(--global-footer-text-color); padding-top: 7px; padding-bottom: 6px; }
 
 footer.fixed-bottom a { color: var(--global-footer-link-color); }
 
