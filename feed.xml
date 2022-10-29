@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-10-23T17:21:32+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">blank</title><subtitle>Personal webpage of Fabien Pesquerel.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-10-29T22:00:46+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">blank</title><subtitle>Personal webpage of Fabien Pesquerel.
 </subtitle><entry><title type="html">Randomness with computer: a tutorial</title><link href="http://localhost:4000/blog/2022/random-number-generation-101/" rel="alternate" type="text/html" title="Randomness with computer: a tutorial" /><published>2022-10-16T00:00:00+02:00</published><updated>2022-10-16T00:00:00+02:00</updated><id>http://localhost:4000/blog/2022/random-number-generation-101</id><content type="html" xml:base="http://localhost:4000/blog/2022/random-number-generation-101/"><![CDATA[<p>In the field of <strong>Machine Learning</strong>, the practitioner has to work (numerically) with random variables. It is therefore natural to wonder <em>how to sample from a random variable with a computer</em>.</p>
 
 <p>To put it in a nutshell: <strong>How to handle randomness with computers?</strong></p>
@@ -10,7 +10,7 @@
 <p><i class="fas fa-dice-one" style="font-size: 1.4em; background-color: transparent;"></i> <a href="#part1" style="font-size: 1.4em">Random Number Generation</a></p>
 <ul>
   <li><strong>Handle randomness</strong> with a computer</li>
-  <li><strong>Reproducibility</strong> in numerical probability</li>
+  <li><strong>Understand reproducibility</strong> in numerical probability</li>
   <li>Implement your own random number generator. Simulate a lot of probability distributions!</li>
 </ul>
 
