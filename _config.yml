@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Fabien
 middle_name: 
 last_name: Pesquerel
-email: [first_name.last_name][at][institution][dot][fr]
+email: "[first_name.last_name][at][institution][dot][fr]"
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple website to share about machine learning, cool stuffs and to help you knowing me a bit better.
 footer_text: >
