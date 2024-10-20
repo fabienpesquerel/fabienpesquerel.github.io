@@ -1,14 +1,14 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - fabienpesquerel
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - fabienpesquerel/ComputationalStatistics_Class
+  - fabienpesquerel/IMED-RL
+  - fabienpesquerel/thesis
+  - fabienpesquerel/MCMC
+  - fabienpesquerel/cppn
+  - mantra-inc/open-mantra-dataset
+  - mercari/ml-system-design-pattern
+  - mercari/engineer-vocabulary-list
