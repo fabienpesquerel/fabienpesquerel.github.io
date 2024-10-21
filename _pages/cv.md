@@ -4,7 +4,7 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 5
-cv_pdf: example_pdf.pdf
-description: To download my resume, please click on the **pdf** icon.
+cv_pdf: fabien_pesquerel_resume.pdf
+description: To download my resume, please click on the pdf icon.
 toc: false
 ---
