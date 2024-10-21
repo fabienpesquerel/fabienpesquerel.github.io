@@ -2,11 +2,17 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: Materials for courses.
 nav: true
 nav_order: 6
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+I am currently not teaching any class.
 
-Organize your courses by years, topics, or universities, however you like!
+In the past, I taught about Reinforcement Learning, Machine Learning, Neural Networks, Operating Systems, and mathematics in general.
+
+I have also been teaching to health professional (mainly urgentist and radiologist) working at a French hospital about Machine Learning.
+
+If you want to hire me to teach about Machine Learning in your company (in French or English), please send me an e-mail!
+
+To learn more about my teaching experience, check my resume!
