@@ -1,19 +1,19 @@
-"odalric":
-  - firstname: ["Odalric-Ambrym", "Odalric-Ambrym Maillard"]
+"maillard":
+  - firstname: ["Odalric-Ambrym", "O.-A."]
     url: https://odalric-ambrymmaillard.github.io/researcher/index.html
 
-"hassan":
-  - firstname: ["Hassan", "Hassan Saber"]
+"saber":
+  - firstname: ["Hassan", "H."]
     url: https://hassansaber.com/
 
-"dorian":
-  - firstname: ["Dorian", "Dorian Baudry"]
+"baudry":
+  - firstname: ["Dorian", "D."]
     url: https://dbaudry.github.io/
 
-"sadegh":
-  - firstname: ["Sadegh", "Sadegh Talebi", "Mohammad Sadegh Talebi"]
+"talebi":
+  - firstname: ["Sadegh", "Mohammad Sadegh", "M. S."]
     url: https://sites.google.com/view/talebi/
 
-"remy":
-  - firstname: ["Rémy", "Rémy Degenne"]
+"degenne":
+  - firstname: ["Rémy", "R."]
     url: https://remydegenne.github.io/
