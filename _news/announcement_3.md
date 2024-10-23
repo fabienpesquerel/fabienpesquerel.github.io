@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:japan: I am starting to learn japanese. Hope to progress steadily and quickly :izakaya_lantern:!
+:japan: I am starting to learn Japanese. Hope to progress steadily and quickly :mount_fuji:!
